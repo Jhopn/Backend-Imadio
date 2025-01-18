@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_imadio
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: imadio_db
+    ports:
+      - "5430:5432"
+    volumes:
+      - postgres_data_imadio:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_imadio:
