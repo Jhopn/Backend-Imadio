@@ -11,7 +11,7 @@ export class TokenRedefinitionController {
         return this.tokenRedefinitionService.createToken(body)
     }
 
-    @Get()
+    @Get(':userId')
     findAllTokens(@Param('userId') userId: string){
         return this.tokenRedefinitionService.findAllTokens(userId)
     }
