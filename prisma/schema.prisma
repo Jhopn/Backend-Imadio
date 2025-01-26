@@ -51,7 +51,7 @@ model TokenRedefinition{
   userId String @map("user_id")
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   token String
-  used Boolean
+  used Boolean @default(false)
   createdAt     DateTime @default(now()) @map("created_at")
-  expirationAt     DateTime @updatedAt @map("expiration_at")
+  expirationAt     DateTime @map("expiration_at")
 }
