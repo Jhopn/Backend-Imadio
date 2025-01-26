@@ -2,10 +2,72 @@ doctype html
 html
   head
     title Recuperação de Senha
+    style.
+      /* Definindo o estilo para o corpo do e-mail */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+      
+      /* Título principal */
+      h1 {
+        color: #2c3e50;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      /* Subtítulo */
+      h2 {
+        color: #16a085;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      /* Parágrafos */
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      /* Estilo para o código de recuperação */
+      h2 {
+        font-size: 26px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      /* Adicionando um fundo com borda */
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Estilo para o rodapé */
+      .footer {
+        font-size: 14px;
+        color: #7f8c8d;
+        text-align: center;
+        margin-top: 20px;
+      }
+
   body
-    h1 Olá, #{username}!
-    p Recebemos sua solicitação para redefinir sua senha.
-    p Seu código de recuperação é:
-    h2 #{code}
-    p Se você não solicitou esta recuperação, ignore este e-mail.
-    p Obrigado, a equipe do nosso projeto!
+    .container
+      h1 Olá, #{username}!
+      p Recebemos sua solicitação para redefinir sua senha.
+      p Seu código de recuperação é:
+      h2 #{code}
+      p Se você não solicitou esta recuperação, ignore este e-mail.
+      p Obrigado, a equipe do nosso projeto!
+    .footer
+      p Este é um e-mail automático. Não responda.

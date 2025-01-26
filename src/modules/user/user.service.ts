@@ -22,11 +22,11 @@ export class UserService {
             throw new HttpException(`Email já cadastrado!`, HttpStatus.CONFLICT);
         
         const ramdomSalt = randomInt(10, 16);
-        const hashPasswor = await bcript.hash(body.password, ramdomSalt)
+        const hashPassword = await bcript.hash(body.password, ramdomSalt)
         const user = await this.prismaService.user.create({
             data: {
                 ...body,
-                password: hashPasswor,
+                password: hashPassword,
             },
             select: {
                 id: true,
